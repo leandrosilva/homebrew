@@ -1,8 +1,8 @@
 require 'formula'
 
-class Mono <Formula
-  url "git://github.com/mono/mono.git", :branch => "mono-2-10"
-  head "git://github.com/mono/mono.git"
+class Mono < Formula
+  url "https://github.com/mono/mono.git", :branch => "mono-2-10"
+  head "https://github.com/mono/mono.git"
   homepage "http://mono-project.com/"
   version "2.10"
 
