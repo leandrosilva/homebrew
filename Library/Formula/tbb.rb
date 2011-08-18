@@ -1,16 +1,16 @@
 require 'formula'
 
-class Tbb <Formula
-  url 'http://www.threadingbuildingblocks.org/uploads/77/148/3.0/tbb30_20100310oss_src.tgz'
-  version '30_20100310'
+class Tbb < Formula
+  url 'http://threadingbuildingblocks.org/uploads/78/170/3.0%20update%207/tbb30_196oss_src.tgz'
+  version '30_196'
   homepage 'http://www.threadingbuildingblocks.org/'
-  md5 'a7dc9b6aa6f33e6f6228cdc26c4a0899'
+  sha1 'eb77db011bc595d77a69de4fb78004b370cabd2f'
 
   def install
     # Override build prefix so we can copy the dylibs out of the same place
     # no matter what system we're on
     args = ['tbb_build_prefix=BUILDPREFIX']
-    args << (snow_leopard_64? ? "arch=intel64" : "arch=ia32")
+    args << (MacOS.prefer_64_bit? ? "arch=intel64" : "arch=ia32")
 
     system "make", *args
     lib.install Dir['build/BUILDPREFIX_release/*.dylib']
