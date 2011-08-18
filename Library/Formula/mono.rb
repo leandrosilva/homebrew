@@ -1,10 +1,10 @@
 require 'formula'
 
 class Mono <Formula
-  url "git://github.com/mono/mono.git", :tag => "mono-2-6-7"
+  url "git://github.com/mono/mono.git", :branch => "mono-2-10"
   head "git://github.com/mono/mono.git"
   homepage "http://mono-project.com/"
-  version "2.6.7"
+  version "2.10"
 
   depends_on "pkg-config"
 
